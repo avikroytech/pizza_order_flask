@@ -45,7 +45,7 @@ def current():
     return render_template('current_orders.html', orders=orders)
 
 
-@app.route('/thank_you')
+@app.route('/payment/thank_you')
 def thanks():
     return render_template('thank_you.html')
 
