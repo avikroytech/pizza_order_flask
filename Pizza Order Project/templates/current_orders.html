@@ -32,11 +32,11 @@
         <p></p>
         <div class="container">
             <div class="jumbotron" style="background-color: #ffcc5e">
-                <h1 class="display-4">Current and Pending Orders</h1>
+                <h1 class="display-4" style="color: #f59542;">Current and Pending Orders</h1>
                 <p></p>
                 <ul class="list-group">
                     {% for id in orders %}
-                    <li class="list-group-item list-group-item-success">{{id}}</li>
+                    <li class="list-group-item list-group-item-success" style="color: #f59542;">{{id}}</li>
                     {% endfor %}
                 </ul>
             </div>
@@ -44,21 +44,24 @@
                 <div class="progress-bar progress-bar-striped bg-warning progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 100%"></div>
             </div>
             <p>
-                <a class="btn btn-warning" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+                <a class="btn btn-warning" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample" style="color: #f59542;">
                     Order Information
                 </a>
             </p>
             <div class="collapse" id="collapseExample">
-                <div class="card card-body" style="background-color: #ffcc5e">
-                    <p>
-                        When you place an order, it will be tracked with an order id. We will give that order to you and erased from the current orders. The order will have everything you ordered, including the price, your first and last name, and your card number.
+                <div class="card card-body" style="background-color: #ffcc5e;">
+                    <p style="color: #f59542;">
+                        When you place an order, you will get an email of the order, including al the details of it.
+                        Then it will show up in the "Current Orders" page where you can also see the details of your order as well as others.
+                        After 20 minutes, we will give you your pizza and remove your order from this page.
                     </p>
-                </div>
+
             </div>
             <div class="progress">
                 <div class="progress-bar progress-bar-striped bg-warning progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 100%"></div>
             </div>
         </div>
+    </div>
     </div>
 </body>
 </html>

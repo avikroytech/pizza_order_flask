@@ -32,37 +32,23 @@
     <p></p>
     <div class="container">
             <div class="jumbotron" style="background-color: #ffcc5e">
-            <h1 class="display-4">Pament and Checkout</h1>
+            <h1 class="display-4" style="color: #f59542;">Pament and Checkout</h1>
             <form method="get">
                 <div class="form-group">
-                    <label for="card">Please give your card number: </label>
+                    <label for="card" style="color: #f59542;">Please give your card number: </label>
                     <input id="card" type="text" placeholder="123 456 789" name="card_number">
                     <p></p>
-                    <label for="first">First Name: </label>
-                    <input type="text" placeholder="First Name" id="first" name="first">
+                    <label for="first" style="color: #f59542;">First Name: </label>
+                    <input type="text" placeholder="First Name" id="first" name="first" style="color: #f59542;">
                     <p></p>
-                    <label for="last">Last Name: </label>
-                    <input type="text" placeholder="Last Name" id="last" name="last">
+                    <label for="last" style="color: #f59542;">Last Name: </label>
+                    <input type="text" placeholder="Last Name" id="last" name="last" style="color: #f59542;">
                     <p></p>
-                    <button type="submit" class="btn btn-warning">Make Payment</button>
-                    <a href="http://127.0.0.1:5000/payment/thank_you" style="color: #14a6a8">Proceed</a>
+                    <button type="submit" class="btn btn-warning" style="color: #f59542;">Make Payment</button>
+                    <a href="http://127.0.0.1:5000/payment/thank_you" style="color: #f59542;">Proceed</a>
                 </div>
             </form>
         </div>
-        <p>
-            <a class="btn btn-primary" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
-                Thank You Message
-            </a>
-        </p>
-        <div class="collapse" id="collapseExample">
-            <div class="card card-body" style="background-color: #ffcc5e">
-                <p>
-                    We will have your pizza ready in 20 minutes. Please wait and we will hand you your pizza.
-                </p>
-                <h1>Thank You for Ordering at Roy Pizzeria!</h1>
-            </div>
-        </div>
-
     </div>
 </div>
 </body>
