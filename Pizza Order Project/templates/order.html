@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Order</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="p-3 mb-2 bg-warning text-dark">
+        <nav class="navbar navbar-light" style="background-color: #ffcc5e">
+            <a class="navbar-brand" href="http://127.0.0.1:5000/">Home</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="http://127.0.0.1:5000/menu">Menu</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="http://127.0.0.1:5000/order">Place Order<span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="http://127.0.0.1:5000/">Current Orders<span class="sr-only">(current)</span></a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <p></p>
+        <div class="container">
+            <div class="jumbotron" style="background-color: #ffcc5e">
+                <h1 class="display-4">Order Up!</h1>
+                <p></p>
+                <form method="get">
+                    <div class="form-group">
+                        <label for="size">Pizza Size</label>
+                        <select class="form-control" id="size" aria-describedby="size_help" name="pizza_size">
+                            <option name="disabled" disabled="disabled">Please pick a size</option>
+                            <option name="big">Big</option>
+                            <option name="medium">Medium</option>
+                            <option name="small">Small</option>
+                        </select>
+                        <small id="size_help" class="form-text text-muted">This will be the size of your pizza.</small>
+                    </div>
+                    <div class="form-group">
+                        <label for="cheese">Type of Cheese</label>
+                        <select class="form-control" id="cheese" aria-describedby="cheese_description" name="cheese_type">
+                            <option name="disabled" disabled="disabled">Please pick a cheese</option>
+                            <option name="mozzarella">Mozzarella</option>
+                            <option name="alfredo">Alfredo</option>
+                            <option name="no_cheese">No cheese</option>
+                        </select>
+                        <small id="cheese_description" class="form-text text-muted">You can say "No cheese" if you don't want cheese</small>
+                    </div>
+                    <div class="form-group">
+                        <p>Available Toppings</p>
+                        <input type="checkbox" id="pineapple" name="pineapple">
+                        <label for="pineapple">Pineapple</label>
+                        <p></p>
+                        <input type="checkbox" id="onion" name="onion">
+                        <label for="onion">Onion</label>
+                        <p></p>
+                        <input type="checkbox" id="chicken" name="chicken">
+                        <label for="chicken">Chicken</label>
+                        <p></p>
+                        <input type="checkbox" id="pepper" name="pepper">
+                        <label for="pepper">Pepper</label>
+                        <p></p>
+                        <input type="checkbox" id="olive" name="olive">
+                        <label for="olive">Olive</label>
+                    </div>
+                    <button type="submit" class="btn btn-warning">Submit Choices</button>
+                    <a href="http://127.0.0.1:5000/payment" style="color: #14a6a8">Proceed to Payment</a>
+                </form>
+            </div>
+        </div>
+
+    </div>
+</body>
+</html>
