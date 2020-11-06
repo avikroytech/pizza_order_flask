@@ -6,13 +6,18 @@
     height: 100px;
 }
 
-
-
-
-
 </style>
 {%if check%}
 {%if cart_cookie == []%}
+{% for flash in get_flashed_messages() %}
+<div class="alert alert-message alert-message-success alert-dismissible fade show">
+    <h4>Alert!</h4>
+    <p class="text-success">{{flash}}</p>
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+    </button>
+</div>
+{%endfor%}
 <div id="all">
     <div id="content">
         <div class="row">
@@ -22,11 +27,11 @@
                         <h1>{{current_user.firstname}}'s cart</h1>
                         <h3 class="text-muted">You currently have no books ordered, right now.</h3>
                         <h5 class="text-muted">Check our book store for our books!</h5>
-                        <!-- /.table-responsive-->
-                        <div class="box-footer d-flex justify-content-between flex-column flex-lg-row">
-                            <div class="left"><a href="/books/Children's" class="btn btn-outline-secondary"><i
-                                    class="fa fa-chevron-left"></i> Continue shopping</a></div>
-                        </div>
+                            <!-- /.table-responsive-->
+                            <div class="box-footer d-flex justify-content-between flex-column flex-lg-row">
+                                <div class="left"><a href="/books/Children's" class="btn btn-outline-secondary"><i
+                                        class="fa fa-chevron-left"></i> Continue shopping</a></div>
+                            </div>
                     </form>
                 </div>
                 <!-- /.box-->
@@ -35,6 +40,46 @@
     </div>
 </div>
 {%else%}
+<style>
+.alert-message
+{
+    margin: 20px 0;
+    padding: 20px;
+    border-left: 3px solid #eee;
+}
+.alert-message h4
+{
+    margin-top: 0;
+    margin-bottom: 5px;
+}
+.alert-message p:last-child
+{
+    margin-bottom: 0;
+}
+.alert-message code
+{
+    background-color: #fff;
+    border-radius: 3px;
+}
+.alert-message-success
+{
+    background-color: #F4FDF0;
+    border-color: #3C763D;
+}
+.alert-message-success h4
+{
+    color: #3C763D;
+}
+</style>
+{% for flash in get_flashed_messages() %}
+<div class="alert alert-message alert-message-success alert-dismissible fade show">
+    <h4>Alert!</h4>
+    <p class="text-success">{{flash}}</p>
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+    </button>
+</div>
+{%endfor%}
 <div id="all">
     <div id="content">
         <div class="row">
@@ -123,6 +168,15 @@
 </div>
 {%endif%}
 {%else%}
+{% for flash in get_flashed_messages() %}
+<div class="alert alert-message alert-message-success alert-dismissible fade show">
+    <h4>Alert!</h4>
+    <p class="text-success">{{flash}}</p>
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+    </button>
+</div>
+{%endfor%}
 <div id="all">
     <div id="content">
         <div class="row">
@@ -132,11 +186,11 @@
                         <h1>{{current_user.firstname}}'s cart</h1>
                         <h3 class="text-muted">You currently have no books ordered, right now.</h3>
                         <h5 class="text-muted">Check our book store for our books!</h5>
-                        <!-- /.table-responsive-->
-                        <div class="box-footer d-flex justify-content-between flex-column flex-lg-row">
-                            <div class="left"><a href="/books/Children's" class="btn btn-outline-secondary"><i
-                                    class="fa fa-chevron-left"></i> Continue shopping</a></div>
-                        </div>
+                            <!-- /.table-responsive-->
+                            <div class="box-footer d-flex justify-content-between flex-column flex-lg-row">
+                                <div class="left"><a href="/books/Children's" class="btn btn-outline-secondary"><i
+                                        class="fa fa-chevron-left"></i> Continue shopping</a></div>
+                            </div>
                     </form>
                 </div>
                 <!-- /.box-->

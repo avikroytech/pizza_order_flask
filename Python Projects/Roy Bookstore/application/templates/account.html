@@ -1,14 +1,13 @@
 {% extends "base.html" %}
 {% block content %}
-<div class="jumbotron" style="background-color: #1e68bd; color: #454545; padding: 50px; border-width: 4px; border-color: #182f4a">
+<body>
+<div class="jumbotron">
     <h1>Welcome, {{current_user.firstname}}</h1>
     <br>
-    <h2>Here is your account info</h2>
-    <br>
     <div class="container">
-        <p><strong>Name: {{current_user.firstname}} {{current_user.lastname}}</strong></p>
-        <p><strong>Email: {{current_user.email}}</strong></p>
-        <p><strong>Username: {{current_user.username}}</strong></p>
+        <h5>Name: {{current_user.firstname}} {{current_user.lastname}}</h5>
+        <h5>Email: {{current_user.email}}</h5>
+        <h5>Username: {{current_user.username}}</h5>
     </div>
 </div>
 {% endblock %}

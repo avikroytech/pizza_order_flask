@@ -1,0 +1,14 @@
+
+Hope you enjoy your new logo, here are the people that
+made your beautiful logo happen :)
+font name: Titillium-Regular
+font link: https://www.fontsquirrel.com/fonts/titillium
+font author: Accademia di Belle Arti Urbino
+font author site: http://www.accademiadiurbino.it/
+Slogan Font: Questrial-Regular.otf
+
+icon designer: Creative Stall
+icon designer link: /creativestall
+        
+{"bg-gradient-0":"#E63500","bg-gradient-1":"#FFC316","icon":"#ffffff","font":"#ffffff","slogan":"#ffffff"}
+      
